@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= soda._id %></title>
+</head>
+<body>
+    <h1><%= soda.name %></h1>
+    <h2><%= soda.flavor %></h2>
+    <% if (soda.tasty) { %>
+    <p>This soda is good!</p>
+    <% } else { %>
+    <p>This soda isnt that great</p>
+    <% } %>
+    
+
+    <a href="/sodas"><button>Back to all Sodas</button></a>
+    <a href="/sodas/<%=soda._id%>/editSoda"><button>Update Soda!</button></a>
+    <form action="/sodas/<%= soda._id %>?_method=DELETE" method="post">
+        <button type="submit">Delete <%= soda.name %></button>
+    </form>
+</body>
+</html>

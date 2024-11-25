@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soda page</title>
+</head>
+<body>
+    <h1>here are all the Sodas listed</h1>
+    <a href="/sodas/addSoda">add a soda</a>
+    <ul>
+        <% sodas.forEach(soda => { %>
+           <li><a href="/sodas/<%= soda._id %>"><%= soda.name %></a></li> 
+        <% }); %>
+    </ul>
+</body>
+</html>

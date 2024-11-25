@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit soda</title>
+</head>
+<body>
+    <h1>Edit <%= soda.name %></h1>
+    <form action="/sodas/<%= soda._id %>?_method=put" method="post">
+        <label for="name">name</label>
+        <input type="text" name="name" value="<%= soda.name %>" id="name"/>
+
+        <label for="flavor">What flavor is your soda??</label>
+        <input type="text" name="flavor" id="flavor">
+
+        <label for="tasty">Is this a good flavor?</label>
+        <input type="checkbox" name="tasty" id="tasty">
+
+        <button type="submit">Update soda!</button>
+    </form>
+</body>
+</html>
